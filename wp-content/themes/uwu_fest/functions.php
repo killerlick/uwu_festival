@@ -50,6 +50,9 @@ function uwu_fest_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'uwu_fest' ),
+			'menu-2' => esc_html__( 'Secondary', 'uwu_fest' ), // menu secondaire (footer)
+        	'menu-3' => esc_html__( 'Thirdry', 'uwu_fest' ), // menu tertiaire (footer)
+
 		)
 	);
 
@@ -134,11 +137,31 @@ function uwu_fest_widgets_init() {
 }
 add_action( 'widgets_init', 'uwu_fest_widgets_init' );
 
+
+
+function uwu_fest_footer_widgets() {
+    register_sidebar( array(
+        'name'          => __( 'Footer Socials', 'uwu_fest' ),
+        'id'            => 'footer-socials',
+        'before_widget' => '<div class="footer-site-socials">',
+        'after_widget'  => '</div>',
+    ) );
+}
+add_action( 'widgets_init', 'uwu_fest_footer_widgets' );
+
+function uwu_fest_enqueue_icons() {
+    wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'uwu_fest_enqueue_icons' );
+
+
 /**
  * Enqueue scripts and styles.
  */
 function uwu_fest_scripts() {
-	wp_enqueue_style( 'uwu_fest-style', get_stylesheet_uri(), array(), _S_VERSION );
+	//wp_enqueue_style( 'uwu_fest-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style('uwu_fest-style', get_stylesheet_uri(), [], filemtime(get_stylesheet_directory() . '/style.css'));
+
 	wp_style_add_data( 'uwu_fest-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'uwu_fest-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

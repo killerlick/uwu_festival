@@ -4,10 +4,167 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.0
+Version: 1.0.2
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: uwu_fest
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/* ===== Style du header et navigation ===== */
+#masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #ff66b2; /* rose vif */
+  padding: 15px 30px;
+  margin: -8px;
+  box-shadow: 0 2px 8px rgba(255, 102, 178, 0.3);
+}
+
+#site-navigation {
+  max-width: 1200px;
+  position: relative;
+}
+
+/* Menu principal - desktop */
+#site-navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+#site-navigation ul li a {
+  text-decoration: none;
+  color: #222;
+  background-color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+}
+
+.custom-logo-link {
+display: flex;
+}
+
+/*logo*/
+.custom-logo {
+  width: 400px; /* taille fixe par défaut */
+  max-width: 50%; /* ne pas dépasser 20% sur grand écran */
+  height: auto;
+  margin: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+  #logo {
+    width: 150px; /* taille adaptée sur tablette/mobile */
+    max-width: 50%;
+  }
+}
+
+/* Effet au hover/focus */
+#site-navigation ul li a:hover,
+#site-navigation ul li a:focus {
+  background-color: #ffd6e8;
+  color: #333;
+}
+
+/* Bouton menu-toggle (mobile) */
+.menu-toggle {
+  display: none;
+  background: #fff;
+  border: 2px solid #ff66b2;
+  color: #ff66b2;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background-color: #ff66b2;
+  color: white;
+}
+
+/* Responsive - mobile */
+@media (max-width: 768px) {
+  #site-navigation ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ff66b2;
+    padding: 15px 30px;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    box-shadow: 0 5px 10px rgba(255, 102, 178, 0.3);
+    z-index: 999;
+  }
+
+  #site-navigation.toggled ul {
+    display: flex;
+  }
+
+  #site-navigation ul li a {
+    color: white;
+    background-color: transparent;
+    padding: 10px 0;
+  }
+
+  #site-navigation ul li a:hover,
+  #site-navigation ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/*FOOTER-------------------------------------*/
+
+
+.site-footer {
+    background-color: #ff66b2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 15px 30px;
+    padding-bottom: 45px;
+    margin: -8px;
+    margin-top: 16px;
+    color: white;
+}
+
+
+
+.footer-social-links a {
+  color: #ffffff;   /* icône blanche */
+  font-size: 24px;  /* taille des icônes */
+  margin-right: 15px; /* espace entre les icônes */
+  transition: color 0.3s ease;
+}
+
+.footer-social-links a:hover {
+  color: #000000;   /* couleur au survol (exemple : rose) */
+}

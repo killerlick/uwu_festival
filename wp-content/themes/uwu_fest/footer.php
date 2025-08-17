@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,12 +12,43 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+<footer id="colophon" class="site-footer">
 
-	</footer><!-- #colophon -->
+	<div class="footer-site-info">
+				<?php
+				if (function_exists('the_custom_logo')) {
+					the_custom_logo();
+				}
+				?>
+		<div class="event-info">
+			Célébration de la culture kawaii à Montréal <br>
+			22-23 novembre 2025 <br>
+			📍9055 St-Hubert, MTL <br>
+		</div>
+	</div>
+	<div class="footer-site-links">
+		<?php
+		wp_nav_menu(array(
+			'theme_location' => 'menu-2',
+			'menu_id'        => 'footer-menu',
+		));
+		?>
+	</div>
+	<div class="footer-social-links">
+		<a href="https://facebook.com" target="_blank">
+			<i class="fab fa-facebook-f"></i>
+		</a>
+		<a href="https://instagram.com" target="_blank">
+			<i class="fab fa-instagram"></i>
+		</a>
+	</div>
+
+
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
