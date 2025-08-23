@@ -51,7 +51,7 @@ function uwu_fest_setup() {
 		array(
 			'menu-1' => esc_html__( 'Primary', 'uwu_fest' ),
 			'menu-2' => esc_html__( 'Secondary', 'uwu_fest' ), // menu secondaire (footer)
-        	'menu-3' => esc_html__( 'Thirdry', 'uwu_fest' ), // menu tertiaire (footer)
+        	'main_pages' => esc_html__( 'main_pages', 'uwu_fest' ), // menu tertiaire (footer)
 
 		)
 	);

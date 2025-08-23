@@ -13,14 +13,38 @@ Text Domain: uwu_fest
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
+
+
+
+body {
+margin: 0;
+  min-height: 100vh;
+  background: #f7a9c4; /* rose pastel kawaii */
+  overflow-x: hidden;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* option fun */}
+
+.site-main {
+
+  padding-top: 48px;
+  padding-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+
+
+
 /* ===== Style du header et navigation ===== */
 #masthead {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-color: #ff66b2; /* rose vif */
+  background-color: #ff66b2;
+  /* rose vif */
   padding: 15px 30px;
-  margin: -8px;
   box-shadow: 0 2px 8px rgba(255, 102, 178, 0.3);
 }
 
@@ -51,13 +75,15 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 }
 
 .custom-logo-link {
-display: flex;
+  display: flex;
 }
 
 /*logo*/
 .custom-logo {
-  width: 400px; /* taille fixe par défaut */
-  max-width: 50%; /* ne pas dépasser 20% sur grand écran */
+  width: 400px;
+  /* taille fixe par défaut */
+  max-width: 50%;
+  /* ne pas dépasser 20% sur grand écran */
   height: auto;
   margin: 8px;
 }
@@ -66,7 +92,8 @@ display: flex;
 
 @media (max-width: 768px) {
   #logo {
-    width: 150px; /* taille adaptée sur tablette/mobile */
+    width: 150px;
+    /* taille adaptée sur tablette/mobile */
     max-width: 50%;
   }
 }
@@ -145,26 +172,112 @@ display: flex;
 
 
 .site-footer {
-    background-color: #ff66b2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center ;
-    padding: 15px 30px;
-    padding-bottom: 45px;
-    margin: -8px;
-    margin-top: 16px;
-    color: white;
+  background-color: #ff66b2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  padding-bottom: 45px;
+  margin: 0px;
+  padding-top: 16px;
+  color: white;
 }
 
-
+.menu-footer ul {
+  
+}
 
 .footer-social-links a {
-  color: #ffffff;   /* icône blanche */
-  font-size: 24px;  /* taille des icônes */
-  margin-right: 15px; /* espace entre les icônes */
+  color: #ffffff;
+  /* icône blanche */
+  font-size: 24px;
+  /* taille des icônes */
+  margin-right: 15px;
+  /* espace entre les icônes */
   transition: color 0.3s ease;
 }
 
 .footer-social-links a:hover {
-  color: #000000;   /* couleur au survol (exemple : rose) */
+  color: #000000;
+  /* couleur au survol (exemple : rose) */
+}
+
+/*post --------------------------------------------*/
+
+/* Style global pour chaque article */
+article.type-post {
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4); /* dégradé rose kawaii */
+  color: #fff;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article.type-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+/* --- Contenu --- */
+.entry-content {
+  margin-top: 15px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.entry-content p {
+  margin-bottom: 12px;
+}
+
+
+/* --- Footer (catégories, commentaires, edit) --- */
+.entry-footer {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.entry-footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.entry-footer a:hover {
+  color: #ffe4f1;
+}
+
+/*article     -------------------------------------*/
+
+
+
+/*Main - site -------------------------------------*/
+
+.site-main {
+  margin: 32px auto;           /* centré horizontalement */
+  padding: 24px;               /* plus d'espace intérieur */
+  max-width: 1200px;            /* largeur max pour lisibilité */
+  background-color: rgba(255,255,255,0.7);   /* fond blanc */
+  border-radius: 12px;         /* coins bien arrondis */
+  border: 1px solid #ddd;      /* bordure fine et douce */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* petite ombre */
+}
+
+.entry-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;                  /* pas de remplissage */
+  -webkit-text-stroke: 3px #F14C9E;    /* juste contour */
+}
+.entry-content{
+  padding: 16px;
+}
+
+.entry-content p , .wp-block-code{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
 }

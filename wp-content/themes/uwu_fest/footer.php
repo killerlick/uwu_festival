@@ -31,14 +31,15 @@
 		wp_nav_menu(array(
 			'theme_location' => 'menu-2',
 			'menu_id'        => 'footer-menu',
+			'menu_class'     => 'menu-footer'
 		));
 		?>
 	</div>
 	<div class="footer-social-links">
-		<a href="https://facebook.com" target="_blank">
+		<a href="https://www.facebook.com/uwumtl" target="_blank">
 			<i class="fab fa-facebook-f"></i>
 		</a>
-		<a href="https://instagram.com" target="_blank">
+		<a href="https://www.instagram.com/uwumtl/" target="_blank">
 			<i class="fab fa-instagram"></i>
 		</a>
 	</div>
