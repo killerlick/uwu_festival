@@ -26,11 +26,12 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<header id="masthead">
-				<?php
-				if (function_exists('the_custom_logo')) {
-					the_custom_logo();
-				}
-				?>
+			
+			<?php
+			if (function_exists('the_custom_logo')) {
+				the_custom_logo();
+			}
+			?>
 
 
 			<nav id="site-navigation" class="main-navigation">
@@ -40,9 +41,12 @@
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 					'menu_class'     => 'menu-items',
+					'container'      => 'nav',
+					'container_class' => 'container-menu-items',
 				));
 				?>
 			</nav>
 		</header>
+
 		<body>
-</body>
+		</body>

@@ -13,8 +13,8 @@
 ?>
 
 <footer id="colophon" class="site-footer">
-
-	<div class="footer-site-info">
+	<div class="footer-main-box">
+			<div class="footer-site-info">
 				<?php
 				if (function_exists('the_custom_logo')) {
 					the_custom_logo();
@@ -42,7 +42,13 @@
 		<a href="https://www.instagram.com/uwumtl/" target="_blank">
 			<i class="fab fa-instagram"></i>
 		</a>
+		<a href="https://beacons.ai/uwumtl?fbclid=PAZXh0bgNhZW0CMTEAAaekpJDEWdIMQo056O3IdiJLwxB6vIWH45GOO1qczS0VTyVrhRofp_6KSUE41w_aem_60n-8tG3mQnQwwVuRZ5nPw">
+			<i class="fas fa-link"></i>
+		</a>
 	</div>
+	</div>
+
+
 
 
 </footer><!-- #colophon -->
